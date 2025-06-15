@@ -5,8 +5,8 @@ import WineItem from "@/components/WineItem";
 import WineVariety from "./WineVariety";
 import MenuCorner from "@/components/MenuCorner";
 import MenuHeader from "@/components/MenuHeader";
-import { ForwardIcon } from "@heroicons/react/24/outline";
-import { BackwardIcon } from "@heroicons/react/24/outline";
+// import { ForwardIcon } from "@heroicons/react/24/outline";
+// import { BackwardIcon } from "@heroicons/react/24/outline";
 
 interface MenuPageProps {
   isLeft?: boolean
