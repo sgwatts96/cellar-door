@@ -1,0 +1,62 @@
+[
+	{
+		"name": "Mount Mary",
+		"variety": "Chardonnay",
+		"location": "Yarra Valley",
+		"vintage": 2021,
+		"price": 150,
+		"purchaseLocation" : "Purvis - Richmond VIC, AU",
+		"purchaseDate": "31/05/2025",
+		"story": "Marcella's first birthday party we went to our favourite wine store in Richmond (Purvis) and chose this bottle to put down."
+	},
+	{
+		"name": "Croquet Croquet",
+		"variety": "Shiraz",
+		"location": "Heathcote",
+		"vintage": 2018,
+		"price": 55,
+		"purchaseLocation" : "Purvis - Richmond VIC, AU",
+		"purchaseDate": "31/05/2025",
+		"story": "Shaun at Purvis said this was a good bottle at $20 a pop when they tried it a few years back. Then they tried it recently (2025) and thought it was absolutely cracking. But they had sold out of the vintage and were only left with magnums which we bought! Bring on a dinner party. Best drinking within the next 5 years."
+	},
+		{
+		"name": "Test 3",
+		"variety": "Chardonnay",
+		"location": "Heathcote",
+		"vintage": 2000,
+		"price": 150,
+		"purchaseLocation" : "Purvis - Richmond VIC, AU",
+		"purchaseDate": "31/05/2025",
+		"story": "Marcella's first birthday party we went to our favourite wine store in Richmond (Purvis) and chose this bottle to put down."
+	},
+	{
+		"name": "Test 4 is a super super supser upserusdflsdkfn sdfl long name",
+		"variety": "Pinot Gris",
+		"location": "Heathcote",
+		"vintage": 2018,
+		"price": 55,
+		"purchaseLocation" : "Purvis - Richmond VIC, AU",
+		"purchaseDate": "31/05/2025",
+		"story": "Shaun at Purvis said this was a good bottle at $20 a pop when they tried it a few years back. Then they tried it recently (2025) and thought it was absolutely cracking. But they had sold out of the vintage and were only left with magnums which we bought! Bring on a dinner party. Best drinking within the next 5 years."
+	},
+	{
+		"name": "Test 5",
+		"variety": "Chardonnay",
+		"location": "Heathcote",
+		"vintage": 2021,
+		"price": 150,
+		"purchaseLocation" : "Purvis - Richmond VIC, AU",
+		"purchaseDate": "31/05/2025",
+		"story": "Marcella's first birthday party we went to our favourite wine store in Richmond (Purvis) and chose this bottle to put down."
+	},
+	{
+		"name": "Croquet Croquets",
+		"variety": "Shiraz",
+		"location": "Heathcote",
+		"vintage": 2018,
+		"price": 55,
+		"purchaseLocation" : "Purvis - Richmond VIC, AU",
+		"purchaseDate": "31/05/2025",
+		"story": "Shaun at Purvis said this was a good bottle at $20 a pop when they tried it a few years back. Then they tried it recently (2025) and thought it was absolutely cracking. But they had sold out of the vintage and were only left with magnums which we bought! Bring on a dinner party. Best drinking within the next 5 years."
+	}
+]

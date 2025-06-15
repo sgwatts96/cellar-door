@@ -1,26 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: rgb(100, 100, 100);
+  --foreground: #e0dfdf;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --font-primary: "Mea Culpa", "cursive";
+  --color-menu: #e2d8d2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #d4d4d4;
+    --foreground: #515050;
   }
+}
+
+@utility pageHover {
+  @apply bg-[#4ee73c] -translate-x-1/2;
+}
+
+@utility pageHoverAfter {
+  @apply content-none;
+}
+
+@utility pageHoverAfterAfter {
+  @apply duration-1000;
+}
+
+/* src: https://www.geeksforgeeks.org/web-templates/how-to-create-paper-corner-fold-effect-on-hover-by-using-html-and-css/ 
+  h1 {
+            color: green;
+        }
+        
+        .Fold {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 200px;
+            background-color: #4EE73C;
+        }
+        
+        h3 {
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        .Fold:after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 0;
+        }
+        
+        .Fold:hover:after {
+            transition-duration: 1s;
+            border-bottom: 50px solid black;
+            border-right: 50px solid white;
+        } */
+
+.fold {
+  /*position: absolute;
+  transform: translate(-50%, -50%);*/
+  background-color: #4ee73c;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
