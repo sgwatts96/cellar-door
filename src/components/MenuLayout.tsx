@@ -14,12 +14,15 @@ const MenuLayout = (props: MenuLayoutProps) => {
 	const isMobile = IsMobile();
 	const [wineIndex, setWineIndex] = useState({mobile: 0, left: 0, right: itemsPerPage});
 	const [showCover, setShowCover] = useState(true);
+	const [isFrontCover, setIsFrontCover] = useState(true)
 
 	const handlePageChange = (direction: string) =>{
 		if(direction === 'forward' && ((wineIndex.mobile+itemsPerPage >= props.data.length) || (wineIndex.right+itemsPerPage >= props.data.length))){
 			setShowCover(!showCover)
+			if(isFrontCover) setIsFrontCover(false)
 		} else if(direction === 'back' && ((wineIndex.mobile === 0 && isMobile) || (!isMobile && wineIndex.left === 0))){
 			setShowCover(!showCover)
+			if(!isFrontCover) setIsFrontCover(true)
 		} else if(isMobile && direction === 'forward'){
 			setWineIndex({...wineIndex, mobile: wineIndex.mobile+itemsPerPage})
 		} else if(isMobile && direction === 'back'){
@@ -32,7 +35,8 @@ const MenuLayout = (props: MenuLayoutProps) => {
 	}
 
 	if(showCover){
-		return <MenuCover isFrontCover={(!isMobile && wineIndex.left === 0) || (isMobile && wineIndex.mobile === 0)} handleCoverPageTurn={() => setShowCover(!showCover)}/>
+		//isFrontCover={(!isMobile && wineIndex.left === 0) || (isMobile && wineIndex.mobile === 0)}
+		return <MenuCover isFrontCover={isFrontCover} handleCoverPageTurn={() => setShowCover(!showCover)}/>
 	}
 	
 	return(
