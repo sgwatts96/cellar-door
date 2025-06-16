@@ -24,7 +24,7 @@ const getWineItems = (props: MenuPageProps) => {
   return(<>
     <MenuCorner location="TopLeft" handlePageChange={handleClick} isLeft={props.isLeft} isRight={props.isRight} isMobile={props.isMobile}/>
     <MenuCorner location="TopRight" handlePageChange={handleClick} isLeft={props.isLeft} isRight={props.isRight} isMobile={props.isMobile}/>
-    <div className="p-8 min-h-[90vh]">
+    <div className="p-5 md:p-8 min-h-[96dvh]">
       <MenuHeader />
       {props.data.map((item, index) => {
         if(index == 0 || (index > 0 && item.variety !== props.data[index-1].variety)) {

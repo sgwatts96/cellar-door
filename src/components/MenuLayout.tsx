@@ -35,40 +35,27 @@ const MenuLayout = (props: MenuLayoutProps) => {
 		return <MenuCover isFrontCover={(!isMobile && wineIndex.left === 0) || (isMobile && wineIndex.mobile === 0)} handleCoverPageTurn={() => setShowCover(!showCover)}/>
 	}
 	
-	if(!isMobile){
-		return(
-			<div className="p-4 rounded-xs bg-[#450000] min-h-[95vh] md:min-h-[90vh]">
-				<div className="bg-menu rounded-md text-slate-800 min-h-[90vh]">
-					<div className="grid grid-cols-201">
-						<div className='col-span-100'>
-							<MenuPage data={props.data.slice(wineIndex.left, wineIndex.left+itemsPerPage)} isLeft={true} handlePageChange={handlePageChange}/>
+	return(
+		<div className="p-4 rounded-xs bg-[#450000] min-h-dvh md:min-h-[90vh]">
+			<div className="bg-menu rounded-md text-slate-800 min-h-[95dvh]">
+				{!isMobile
+					?
+						<div className="grid grid-cols-201">
+							<div className='col-span-100'>
+								<MenuPage data={props.data.slice(wineIndex.left, wineIndex.left+itemsPerPage)} isLeft={true} handlePageChange={handlePageChange}/>
+							</div>
+							<div className='col-span-1 bg-gradient-to-r from-[#e2d8d2] via-gray-800 to-[#e2d8d2]' />
+							<div className='col-span-100'>
+								<MenuPage data={props.data.slice(wineIndex.right, wineIndex.right+itemsPerPage)} isRight={true} handlePageChange={handlePageChange}/>
+							</div>
 						</div>
-						<div className='col-span-1 bg-gradient-to-r from-[#e2d8d2] via-gray-800 to-[#e2d8d2]' />
-						<div className='col-span-100'>
-							<MenuPage data={props.data.slice(wineIndex.right, wineIndex.right+itemsPerPage)} isRight={true} handlePageChange={handlePageChange}/>
-						</div>
-					</div>
-				</div>
+					:
+						<MenuPage data={props.data.slice(wineIndex.mobile, wineIndex.mobile+itemsPerPage)} isMobile={true} handlePageChange={handlePageChange}/>
+				}
+				
 			</div>
-			// <div className="grid grid-cols-201">
-			// 	<div className='col-span-100'>
-			// 		<MenuPage data={props.data.slice(wineIndex.left, wineIndex.left+itemsPerPage)} isLeft={true} handlePageChange={handlePageChange}/>
-			// 	</div>
-			// 	<div className='col-span-1 bg-gradient-to-r from-[#e2d8d2] via-gray-800 to-[#e2d8d2]' />
-			// 	<div className='col-span-100'>
-			// 		<MenuPage data={props.data.slice(wineIndex.right, wineIndex.right+itemsPerPage)} isRight={true} handlePageChange={handlePageChange}/>
-			// 	</div>
-			// </div>
-		)
-	} else{
-		return(
-			<div className="p-4 rounded-xs bg-[#450000] min-h-[95vh] md:min-h-[90vh]">
-				<div className="bg-menu rounded-md text-slate-800 min-h-[90vh]">
-					<MenuPage data={props.data.slice(wineIndex.mobile, wineIndex.mobile+itemsPerPage)} isMobile={true} handlePageChange={handlePageChange}/>
-				</div>
-			</div>
-		)
-	}
+		</div>
+	)
 }
 
 export default MenuLayout

@@ -8,12 +8,12 @@ interface WineItemsProps {
 const WineItem = (props: WineItemsProps) => {
 	return(
 		<section id={props.data.name}>
-			<div className='flex flex-col pb-4 pl-6'>
+			<div className='flex flex-col pb-4 pl-4 md:pl-6'>
 				<section className='flex'>
 					<span className="shrink flex-none font-primary font-semibold text-2xl">
 						{props.data.name} - {props.data.location}
 					</span>
-					<span className="grow text-end text-l">
+					<span className="grow text-end text-l pl-2">
 						{props.data.vintage}
 					</span>
 				</section>
