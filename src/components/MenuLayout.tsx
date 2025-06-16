@@ -37,7 +37,7 @@ const MenuLayout = (props: MenuLayoutProps) => {
 	
 	return(
 		<div className="p-4 rounded-xs bg-[#450000] min-h-dvh md:min-h-[90vh]">
-			<div className="bg-menu rounded-md text-slate-800 min-h-[95dvh]">
+			<div className="bg-menu rounded-md text-slate-800 min-h-[95dvh] md:min-h-[90vh]">
 				{!isMobile
 					?
 						<div className="grid grid-cols-201">
